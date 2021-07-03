@@ -32,7 +32,8 @@ And to use JDBC with Spring Boot and MySQL:
     <scope>runtime</scope>
 </dependency>
 Note that the dependency versions are already defined by the Spring Boot starter parent project.
- 
+
+
 4. Configure JDBC Authentication Details
 To use Spring Security with form-based authentication and JDBC, create the WebSecurityConfig class as follows:
 package net.codejava;
@@ -107,6 +108,9 @@ And to add a Logout button:
   <form th:action="@{/logout}" method="post">
     <input type="submit" value="Logout" />
   </form>
+  
+  5. Test Login and Logout
+Start the Spring Boot application and access http://localhost:8080 in web browser, you will see the default login page provided by Spring security appears:
 As you can see, Spring Security will handle login and logout for the application. We don’t have to write repetitive code, just specify some configurations.
 
 ![image](https://user-images.githubusercontent.com/43759116/124358400-b738c980-dc3d-11eb-8ec5-426206867b67.png)
