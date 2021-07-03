@@ -101,13 +101,6 @@ protected void configure(HttpSecurity http) throws Exception {
         .logout().permitAll();     
 }
 
-Here, we specify that all requests must be authenticated, meaning the users must login to use the application. The default login form provided by Spring security is used.
-To show username of the logged in user, write the following code in a Thymeleaf template file:
-<h3 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3>
-And to add a Logout button:
-  <form th:action="@{/logout}" method="post">
-    <input type="submit" value="Logout" />
-  </form>
   
   5. Test Login and Logout
 Start the Spring Boot application and access http://localhost:8080 in web browser, you will see the default login page provided by Spring security appears:
